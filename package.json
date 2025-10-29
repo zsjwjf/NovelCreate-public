@@ -1,0 +1,19 @@
+{
+  "name": "novel-timeline-web",
+  "version": "1.0.0",
+  "description": "小说时间线编辑器网页版",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./styles.css",
+    "build:js": "esbuild index.tsx --bundle --outfile=bundle.js --platform=browser --format=esm --loader:.tsx=tsx --external:react --external:react-dom/* --external:@google/genai --external:d3",
+    "build": "npm run build:css && npm run build:js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "^0.21.4",
+    "tailwindcss": "^3.4.3",
+    "postcss": "^8.4.38",
+    "autoprefixer": "^10.4.19"
+  }
+}
